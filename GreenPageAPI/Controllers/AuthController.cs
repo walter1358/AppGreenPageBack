@@ -80,6 +80,7 @@ namespace GreenPageAPI.Controllers
             {
                 return BadRequest("La contraseña debe tener al menos 1 mayúscula, 1 minúscula, 1 número y más de 8 caracteres.");
             }
+
         if (!usuario.ValidarEspaciosIzquierda(usuario.NomUsuario))
         {
             return BadRequest("El nombre de usuario no puede tener  espacios a la izquierda");
@@ -94,7 +95,39 @@ namespace GreenPageAPI.Controllers
         {
             return BadRequest("El nombre de usuario no puede contener números ni carácteres espaciales");
         }  
+
+        if (!usuario.ValidarEspaciosIzquierda(usuario.Login))
+        {
+            return BadRequest("El Login no puede tener  espacios a la izquierda");
+        }            
+        // Validar el nombre de usuario
+        if (!usuario.IsValidLength(usuario.Login.Trim()))
+        {
+            return BadRequest("La longitud del Login es inválida:debe ser mayor a 10 y menor a 40, asegurate de no tener espacios en blanco");
+        }      
+
+        if (!usuario.IsValidEmail(usuario.Login))
+        {
+            return BadRequest("El correo electrónico ingresado no es válido.");
+        }            
    
+        if (!usuario.ValidarEspaciosIzquierda(usuario.Respuesta))
+        {
+            return BadRequest("La respuesta no puede tener  espacios a la izquierda");
+        }  
+
+        if (!usuario.IsValidLengthRespuesta())
+        {
+            return BadRequest("La longitud de la Respuesta es inválida:debe ser mayor a 10 y menor a 40, asegurate de no tener espacios en blanco");
+        } 
+        // Validar el nombre de usuario
+        // Validar el nombre de usuario
+        if (!usuario.ContainsOnlyLetters(usuario.Respuesta))
+        {
+            return BadRequest("La respuesta no puede contener números ni carácteres espaciales");
+        }        
+
+
         // Hashea la contraseña del usuario
             usuario.Pass = BCrypt.Net.BCrypt.HashPassword(usuario.Pass);
             

@@ -1,3 +1,38 @@
+        public bool ContainsOnlyLettersRespuesta(string username)
+        {
+    // Permite letras (mayúsculas y minúsculas) y espacios
+            return username.All(c => char.IsLetter(c) || char.IsDigit(c) || char.IsWhiteSpace(c));            
+        }  
+ 
+        if (!usuario.ContainsOnlyLettersRespuesta(usuario.Respuesta))
+        {
+            return BadRequest("La respuesta no puede tener caracteres");
+        }    
+ 
+ername.Length >= 2 &&
+ 
+username
+ 
+Login
+ 
+usuario
+ 
+nombre
+ 
+La longitud del Login es inválida:debe ser mayor a 10 y menor a 40, asegurate de no tener espacios en blan
+ 
+Trim
+ 
+
+            public bool IsValidEmail()
+            {
+                // Expresión regular para validar el formato del correo electrónico
+                string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+                return Regex.IsMatch(Email, pattern);
+            }   
+ 
+usuario
+ 
 derecha
  
 

@@ -46,6 +46,10 @@ namespace GreenPageAPI.Models
         {
             return username.Length >= 10 && username.Length <= 40;
         }
+        public bool IsValidLengthRespuesta()
+        {
+            return Respuesta.Trim().Length <= 40;
+        }        
 
         public bool ContainsOnlyLetters(string username)
         {
@@ -60,7 +64,15 @@ namespace GreenPageAPI.Models
                 Regex regex = new Regex(pattern);
                 
                 return regex.IsMatch(cadena);
-        }           
+        }   
+
+    // Método para validar el formato del correo electrónico
+    public bool IsValidEmail(string email)
+    {
+        // Expresión regular para validar el formato del correo electrónico
+        string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+        return Regex.IsMatch(email, pattern);
+    }                  
 
 }
 }
