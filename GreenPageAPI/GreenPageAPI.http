@@ -1,0 +1,6 @@
+@GreenPageAPI_HostAddress = http://localhost:5048
+
+GET {{GreenPageAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

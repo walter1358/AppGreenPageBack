@@ -1,0 +1,152 @@
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/appsettings.Development.json
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/appsettings.json
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/GreenPageAPI.exe
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/GreenPageAPI.deps.json
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/GreenPageAPI.runtimeconfig.json
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/GreenPageAPI.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/GreenPageAPI.pdb
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.OpenApi.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/obj/Debug/net8.0/GreenPageAPI.csproj.AssemblyReference.cache
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/obj/Debug/net8.0/GreenPageAPI.GeneratedMSBuildEditorConfig.editorconfig
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/obj/Debug/net8.0/GreenPageAPI.AssemblyInfoInputs.cache
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/obj/Debug/net8.0/GreenPageAPI.AssemblyInfo.cs
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/obj/Debug/net8.0/GreenPageAPI.csproj.CoreCompileInputs.cache
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/obj/Debug/net8.0/GreenPageAPI.MvcApplicationPartsAssemblyInfo.cs
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/obj/Debug/net8.0/GreenPageAPI.MvcApplicationPartsAssemblyInfo.cache
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/obj/Debug/net8.0/staticwebassets.build.json
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/obj/Debug/net8.0/staticwebassets.development.json
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/obj/Debug/net8.0/staticwebassets/msbuild.GreenPageAPI.Microsoft.AspNetCore.StaticWebAssets.props
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/obj/Debug/net8.0/staticwebassets/msbuild.build.GreenPageAPI.props
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.GreenPageAPI.props
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.GreenPageAPI.props
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/obj/Debug/net8.0/staticwebassets.pack.json
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/obj/Debug/net8.0/scopedcss/bundle/GreenPageAPI.styles.css
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/obj/Debug/net8.0/GreenPag.8D64D2B1.Up2Date
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/obj/Debug/net8.0/GreenPageAPI.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/obj/Debug/net8.0/refint/GreenPageAPI.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/obj/Debug/net8.0/GreenPageAPI.pdb
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/obj/Debug/net8.0/GreenPageAPI.genruntimeconfig.cache
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/obj/Debug/net8.0/ref/GreenPageAPI.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.Extensions.Caching.Memory.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.Extensions.DependencyInjection.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.Extensions.Logging.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.Extensions.Logging.Abstractions.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.Extensions.Options.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Azure.Core.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Azure.Identity.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.Bcl.AsyncInterfaces.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.Data.SqlClient.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Relational.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.SqlServer.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.Identity.Client.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.Identity.Client.Extensions.Msal.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.SqlServer.Server.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.Win32.SystemEvents.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/System.Configuration.ConfigurationManager.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/System.Drawing.Common.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/System.Memory.Data.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/System.Runtime.Caching.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/System.Security.Cryptography.ProtectedData.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/System.Security.Permissions.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/System.Windows.Extensions.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/runtimes/unix/lib/net6.0/Microsoft.Data.SqlClient.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/runtimes/win/lib/net6.0/Microsoft.Data.SqlClient.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/runtimes/unix/lib/net6.0/System.Drawing.Common.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/runtimes/win/lib/net6.0/System.Runtime.Caching.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
+D:/Proyectos/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/appsettings.Development.json
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/appsettings.json
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/GreenPageAPI
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/GreenPageAPI.deps.json
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/GreenPageAPI.runtimeconfig.json
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/GreenPageAPI.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/GreenPageAPI.pdb
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Azure.Core.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Azure.Identity.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.Bcl.AsyncInterfaces.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.Data.SqlClient.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Relational.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.SqlServer.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.Extensions.Caching.Memory.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.Extensions.DependencyInjection.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.Extensions.Logging.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.Extensions.Logging.Abstractions.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.Extensions.Options.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.Identity.Client.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.Identity.Client.Extensions.Msal.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.OpenApi.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.SqlServer.Server.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Microsoft.Win32.SystemEvents.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/System.Configuration.ConfigurationManager.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/System.Drawing.Common.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/System.Memory.Data.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/System.Runtime.Caching.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/System.Security.Cryptography.ProtectedData.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/System.Security.Permissions.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/System.Windows.Extensions.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/runtimes/unix/lib/net6.0/Microsoft.Data.SqlClient.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/runtimes/win/lib/net6.0/Microsoft.Data.SqlClient.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/runtimes/unix/lib/net6.0/System.Drawing.Common.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/runtimes/win/lib/net6.0/System.Runtime.Caching.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/bin/Debug/net8.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/obj/Debug/net8.0/GreenPageAPI.csproj.AssemblyReference.cache
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/obj/Debug/net8.0/GreenPageAPI.GeneratedMSBuildEditorConfig.editorconfig
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/obj/Debug/net8.0/GreenPageAPI.AssemblyInfoInputs.cache
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/obj/Debug/net8.0/GreenPageAPI.AssemblyInfo.cs
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/obj/Debug/net8.0/GreenPageAPI.csproj.CoreCompileInputs.cache
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/obj/Debug/net8.0/GreenPageAPI.MvcApplicationPartsAssemblyInfo.cs
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/obj/Debug/net8.0/GreenPageAPI.MvcApplicationPartsAssemblyInfo.cache
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/obj/Debug/net8.0/staticwebassets.build.json
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/obj/Debug/net8.0/staticwebassets.development.json
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/obj/Debug/net8.0/staticwebassets/msbuild.GreenPageAPI.Microsoft.AspNetCore.StaticWebAssets.props
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/obj/Debug/net8.0/staticwebassets/msbuild.build.GreenPageAPI.props
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.GreenPageAPI.props
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.GreenPageAPI.props
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/obj/Debug/net8.0/staticwebassets.pack.json
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/obj/Debug/net8.0/scopedcss/bundle/GreenPageAPI.styles.css
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/obj/Debug/net8.0/GreenPag.8D64D2B1.Up2Date
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/obj/Debug/net8.0/GreenPageAPI.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/obj/Debug/net8.0/refint/GreenPageAPI.dll
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/obj/Debug/net8.0/GreenPageAPI.pdb
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/obj/Debug/net8.0/GreenPageAPI.genruntimeconfig.cache
+/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/obj/Debug/net8.0/ref/GreenPageAPI.dll
