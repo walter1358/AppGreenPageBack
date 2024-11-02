@@ -1,5 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.RegularExpressions;
+
 
 namespace GreenPageAPI.Models
 {
@@ -38,6 +40,27 @@ namespace GreenPageAPI.Models
                    Pass.Any(char.IsUpper) && // Al menos una mayúscula
                    Pass.Any(char.IsLower) && // Al menos una minúscula
                    Pass.Any(char.IsDigit);    // Al menos un número
-        }        
-    }
+        } 
+
+        public bool IsValidLength(string username)
+        {
+            return username.Length >= 10 && username.Length <= 40;
+        }
+
+        public bool ContainsOnlyLetters(string username)
+        {
+    // Permite letras (mayúsculas y minúsculas) y espacios
+            return username.All(c => char.IsLetter(c) || char.IsWhiteSpace(c));            
+        }   
+          
+        public  bool ValidarEspaciosIzquierda(string cadena)
+        {
+                // Establecer el límite de espacios a 2 en la expresión regular para ambos lados
+                string pattern = @"^ {0,0}[^ ](.*?[^ ].*?)? {0,2}$";
+                Regex regex = new Regex(pattern);
+                
+                return regex.IsMatch(cadena);
+        }           
+
+}
 }

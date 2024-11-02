@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
+
 namespace GreenPageAPI.Controllers
 {
     public class AuthController : ControllerBase
@@ -17,14 +18,30 @@ namespace GreenPageAPI.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginModel model)
         {
-            var user = await dataContext.Usuarios.FirstOrDefaultAsync(u => u.Login == model.User && u.Pass == model.Pass);
+            //var user = await dataContext.Usuarios.FirstOrDefaultAsync(u => u.Login == model.User && u.Pass == model.Pass);
+            var user = await dataContext.Usuarios.FirstOrDefaultAsync(u => u.Login == model.User);            if (user == null)
             if (user == null)
+            
             {
-                return Unauthorized();
+                return NotFound("Usuario no encontrado.");
             }
 
-            return Ok(new { message = "Login exitoso" });
-        }
+            var response = new
+            {
+                message = "Login exitoso",
+                userlogger = new 
+                {
+                    id = user.IdUsuario,
+                    nomUsuario = user.NomUsuario,
+                    idPerfil = user.IdPerfil,
+                    perfilNombre = user.IdPerfil == 1 ? "Subastador/Ofertador" : "Admin"
+                }
+            };
+            
+
+
+            //return Ok(new { message = "Login exitoso" });
+            return Ok(response);        }
         
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] Usuario usuario)
@@ -63,7 +80,24 @@ namespace GreenPageAPI.Controllers
             {
                 return BadRequest("La contraseña debe tener al menos 1 mayúscula, 1 minúscula, 1 número y más de 8 caracteres.");
             }
-
+        if (!usuario.ValidarEspaciosIzquierda(usuario.NomUsuario))
+        {
+            return BadRequest("El nombre de usuario no puede tener  espacios a la izquierda");
+        }            
+        // Validar el nombre de usuario
+        if (!usuario.IsValidLength(usuario.NomUsuario.Trim()))
+        {
+            return BadRequest("La longitud del nombre de usuario es inválida: mayor a 10 y menor a 40, asegurate de no tener espacios en blanco");
+        }        
+        // Validar el nombre de usuario
+        if (!usuario.ContainsOnlyLetters(usuario.NomUsuario))
+        {
+            return BadRequest("El nombre de usuario no puede contener números ni carácteres espaciales");
+        }  
+   
+        // Hashea la contraseña del usuario
+            usuario.Pass = BCrypt.Net.BCrypt.HashPassword(usuario.Pass);
+            
             // Establecer el perfil como 1 por defecto
             usuario.IdPerfil = 1;
 

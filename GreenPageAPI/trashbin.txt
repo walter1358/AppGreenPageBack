@@ -1,0 +1,49 @@
+derecha
+ 
+
+        public bool IsValidUsername()
+        {
+            return !string.IsNullOrWhiteSpace(NomUsuario);
+        }
+ 
+        // Validar el nombre de usuario
+        if (!usuario.IsValidUsername())
+        {
+            return BadRequest("El usuario no puede estar vacio ni tener espacios en blanco");
+        }
+ 
+static
+ 
+nomUsuario
+ 
+El nombre de usuario debe tener entre 10 y 40 caracteres, solo letras y no contener números ni caracteres especiales.
+ 
+&
+                IsValidLength(NomUsuario) &&
+                ContainsOnlyLetters(NomUsuario)
+ 
+        public bool IsValidUsername()
+{
+    // Verificar si el nombre de usuario es nulo o está vacío
+    if (string.IsNullOrWhiteSpace(NomUsuario))
+    {
+        return false;
+    }
+
+    // Verificar longitud entre 10 y 40 caracteres
+    if (NomUsuario.Length < 10 || NomUsuario.Length > 40)
+    {
+        return false;
+    }
+
+    // Verificar que solo contenga letras (mayúsculas y minúsculas) y sin números o caracteres especiales
+    if (!NomUsuario.All(char.IsLetter))
+    {
+        return false;
+    }
+
+    return true;
+    }
+       
+    }
+ 
