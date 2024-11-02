@@ -15,15 +15,45 @@ namespace GreenPageAPI.Controllers
             dataContext = context;
         }
 
+        [HttpPost("recuperauser")]
+        public async Task<IActionResult> Recuperauser([FromBody] UserModel usermodel)
+        {
+            var user = await dataContext.Usuarios.FirstOrDefaultAsync(u => u.Login == usermodel.User);
+            if (user == null)
+            {
+                return NotFound("Usuario no encontrado.");
+            }
+
+            var response = new
+            {
+                message = "Usuario encontrado",
+                userlogger = new 
+                {
+                    id = user.IdUsuario,
+                    Pregunta = user.Pregunta
+                    //nomUsuario = user.NomUsuario,
+                    //idPerfil = user.IdPerfil,
+                    //perfilNombre = user.IdPerfil == 1 ? "Subastador/Ofertador" : "Admin"
+                }
+            };            
+            return Ok(response);
+        }
+
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginModel model)
         {
             //var user = await dataContext.Usuarios.FirstOrDefaultAsync(u => u.Login == model.User && u.Pass == model.Pass);
-            var user = await dataContext.Usuarios.FirstOrDefaultAsync(u => u.Login == model.User);            if (user == null)
+            var user = await dataContext.Usuarios.FirstOrDefaultAsync(u => u.Login == model.User);
             if (user == null)
             
             {
                 return NotFound("Usuario no encontrado.");
+            }
+
+            bool isPasswordValid = BCrypt.Net.BCrypt.Verify(model.Pass, user.Pass);
+            if (!isPasswordValid)
+            {
+                return Unauthorized("Contraseña incorrecta.");
             }
 
             var response = new
@@ -41,7 +71,8 @@ namespace GreenPageAPI.Controllers
 
 
             //return Ok(new { message = "Login exitoso" });
-            return Ok(response);        }
+            return Ok(response);
+        }
         
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] Usuario usuario)
@@ -167,6 +198,13 @@ namespace GreenPageAPI.Controllers
             [Required]
             public string Pass { get; set; }
         }
+
+
+        public class UserModel
+        {
+            [Required]
+            public string User { get; set; }
+        }        
 
         
 
