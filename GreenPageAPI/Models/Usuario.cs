@@ -13,21 +13,29 @@ namespace GreenPageAPI.Models
         public int? IdPerfil { get; set; }
 
         [Required]
-        [StringLength(255)]
+        [StringLength(40)]
         public string NomUsuario { get; set; }
 
         [Required]
-        [StringLength(100)]
+        [StringLength(40)]
+        public string ApeUsuario  {get;set;}
+
+        [Required]
+        [StringLength(8)]
+        public string DNI  {get;set;}
+
+        [Required]
+        [StringLength(40)]
         public string Login { get; set; }
 
         [Required]
-        [StringLength(100)]
+        [StringLength(60)]
         public string Pass { get; set; }
 
-        [StringLength(255)]
+        [StringLength(60)]
         public string? Pregunta { get; set; } // Opcional, puedes añadir [Required] si es necesario.
 
-        [StringLength(255)]
+        [StringLength(60)]
         public string? Respuesta { get; set; } // Opcional, puedes añadir [Required] si es necesario.                
 
         public DateTime? FecCreacion { get; set; }
@@ -44,7 +52,7 @@ namespace GreenPageAPI.Models
 
         public bool IsValidLength(string username)
         {
-            return username.Length >= 10 && username.Length <= 40;
+            return username.Length >= 4 && username.Length <= 40;
         }
         public bool IsValidLengthRespuesta()
         {

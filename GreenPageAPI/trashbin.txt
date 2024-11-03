@@ -1,3 +1,8 @@
+                if (!user.IsValidPassword())
+                {
+                    return BadRequest("La contraseña debe tener al menos 1 mayúscula, 1 minúscula, 1 número y más de 8 caracteres.");
+                }  
+ 
                 return Ok(new { message = "Registro exitoso" });
 
  
