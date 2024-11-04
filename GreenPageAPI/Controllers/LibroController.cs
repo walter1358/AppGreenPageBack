@@ -15,10 +15,32 @@ namespace GreenPageAPI.Controllers
             _context = context;
         }
 
-        [HttpGet]
+        /*[HttpGet]
         public async Task<ActionResult<IEnumerable<Libro>>> GetLibros()
         {
             return await _context.Libros.ToListAsync();
+        }*/
+
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Libro>>> GetLibros()
+        {
+            var libros = await _context.Libros
+            .Include(l => l.Editorial)
+            .Include(l => l.Genero)
+            .Select(l => new
+            {
+                l.IdLibro,
+                l.Destitulo,
+                l.Estado,
+                l.ISBN,
+                l.Sinopsys,
+                Editorial = l.Editorial.deseditorial,
+                Genero = l.Genero.desgenero
+            })
+            .ToListAsync();
+
+    return Ok(libros);
+
         }
 
         [HttpGet("{id}")]

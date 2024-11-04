@@ -15,6 +15,13 @@ namespace GreenPageAPI.Models
         [Required]
         public int IdGenero { get; set; }
 
+
+        [ForeignKey("IdEditorial")]
+        public Editorial Editorial { get; set; } // Propiedad de navegación a Editorial
+
+        [ForeignKey("IdGenero")]
+        public Genero Genero { get; set; } // Propiedad de navegación a Genero        
+
         [Required]
         [StringLength(255)]
         public string Destitulo { get; set; }
@@ -33,4 +40,22 @@ namespace GreenPageAPI.Models
 
         public int? IdUsuario { get; set; }
     }
+
+
+    [Table("EDITORIAL")]
+    public class Editorial
+    {
+        [Key]
+        public int ideditorial { get; set; }
+        public string deseditorial { get; set; }
+    }
+
+    [Table("GENERO")]
+    public class Genero
+    {
+        [Key]
+        public int idgenero { get; set; }
+        public string desgenero { get; set; }
+    }
+
 }

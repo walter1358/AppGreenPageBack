@@ -79,82 +79,120 @@ namespace GreenPageAPI.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] Usuario usuario)
         {
+
+            //validamos usuario
+            if (string.IsNullOrWhiteSpace(usuario.NomUsuario))
+            {
+                return BadRequest("El parámetro 'Nombre' no puede estar vacío.");
+            }
+            if (!usuario.ValidarEspaciosIzquierda(usuario.NomUsuario))
+            {
+                return BadRequest("El nombre de usuario no puede tener  espacios a la izquierda");
+            }    
+            if (!usuario.IsValidLength(usuario.NomUsuario.Trim()))
+            {
+                return BadRequest("La longitud del nombre de usuario es inválida: mayor a 4 y menor a 40, asegurate de no tener espacios en blanco");
+            }        
+            if (!usuario.ContainsOnlyLetters(usuario.NomUsuario))
+            {
+                return BadRequest("El nombre de usuario no puede contener números ni carácteres espaciales");
+            }       
+
+            //validamos apellido
+            if (string.IsNullOrWhiteSpace(usuario.ApeUsuario))
+            {
+                return BadRequest("El parámetro 'Apellido' no puede estar vacío.");
+            }
+            if (!usuario.ValidarEspaciosIzquierda(usuario.ApeUsuario))
+            {
+                return BadRequest("El Apellido de usuario no puede tener  espacios a la izquierda");
+            }    
+            if (!usuario.IsValidLength(usuario.ApeUsuario.Trim()))
+            {
+                return BadRequest("La longitud del Apellido de usuario es inválida: mayor a 4 y menor a 40, asegurate de no tener espacios en blanco");
+            }        
+            if (!usuario.ContainsOnlyLetters(usuario.ApeUsuario))
+            {
+                return BadRequest("El Apellido de usuario no puede contener números ni carácteres espaciales");
+            } 
+
             // Verifica si el Login ya existe
-            var existingUser = await dataContext.Usuarios
-                .FirstOrDefaultAsync(u => u.Login == usuario.Login);
-            // Validar los parámetros antes de llamar al SP
+            var existingUser = await dataContext.Usuarios.FirstOrDefaultAsync(u => u.Login == usuario.Login);
             if (existingUser != null)
             {
                 return BadRequest("El usuario ya existe con ese Login.");
             }
+            if (string.IsNullOrWhiteSpace(usuario.dni))
+            {
+                return BadRequest("El parámetro 'dni' no puede estar vacío.");
+            }            
+            if (usuario.dni.Length != 8)
+            {
+                return BadRequest("El parámetro 'dni' debe tener 8 digitos.");
+            }
+            if (!usuario.dni.All(char.IsDigit))
+            {
+                return BadRequest("El parámetro 'dni' solo debe tener dígitos numéricos.");
+            }            
+
+            // Verifica si el DNI ya existe
+            var existingdni = await dataContext.Usuarios.FirstOrDefaultAsync(u => u.dni == usuario.dni);
+            if (existingdni != null)
+                {
+                    return BadRequest("El usuario ya existe con ese dni.");
+                }        
+
+
+            //validamos el Login
             if (string.IsNullOrWhiteSpace(usuario.Login))
             {
                 return BadRequest("El parámetro 'Login' no puede estar vacío.");
             }
+            if (!usuario.ValidarEspaciosIzquierda(usuario.Login))
+            {
+                return BadRequest("El Login no puede tener  espacios a la izquierda");
+            }            
+            if (!usuario.IsValidLength(usuario.Login.Trim()))
+            {
+                return BadRequest("El correo electrónico ingresado para el login no es válido");
+            }      
+            if (!usuario.IsValidEmail(usuario.Login))
+            {
+                return BadRequest("El correo electrónico ingresado para el login no es válido.");
+            }  
+
+            // Validar la contraseña
             if (string.IsNullOrWhiteSpace(usuario.Pass))
             {
                 return BadRequest("El parámetro 'Pass' no puede estar vacío.");
-            }            
-            if (string.IsNullOrWhiteSpace(usuario.NomUsuario))
-            {
-                return BadRequest("El parámetro 'NomUsuario' no puede estar vacío.");
-            }
-            if (string.IsNullOrWhiteSpace(usuario.Pregunta))
-            {
-                return BadRequest("El parámetro 'Pregunta' no puede estar vacío.");
-            }
-            if (string.IsNullOrWhiteSpace(usuario.Respuesta))
-            {
-                return BadRequest("El parámetro 'Respuesta' no puede estar vacío.");
-            }            
-
-            // Validar la contraseña
+            }     
             if (!usuario.IsValidPassword())
             {
                 return BadRequest("La contraseña debe tener al menos 1 mayúscula, 1 minúscula, 1 número y más de 8 caracteres.");
             }
 
-            if (!usuario.ValidarEspaciosIzquierda(usuario.NomUsuario))
+            //validamos pregunta
+            if (string.IsNullOrWhiteSpace(usuario.Pregunta))
             {
-                return BadRequest("El nombre de usuario no puede tener  espacios a la izquierda");
-            }            
-            // Validar el nombre de usuario
-            if (!usuario.IsValidLength(usuario.NomUsuario.Trim()))
-            {
-                return BadRequest("La longitud del nombre de usuario es inválida: mayor a 4 y menor a 40, asegurate de no tener espacios en blanco");
-            }        
-            // Validar el nombre de usuario
-            if (!usuario.ContainsOnlyLetters(usuario.NomUsuario))
-            {
-                return BadRequest("El nombre de usuario no puede contener números ni carácteres espaciales");
-            }  
+                return BadRequest("El parámetro 'Pregunta' no puede estar vacío.");
+            }
 
-            if (!usuario.ValidarEspaciosIzquierda(usuario.Login))
-            {
-                return BadRequest("El Login no puede tener  espacios a la izquierda");
-            }            
-            // Validar el nombre de usuario
-            if (!usuario.IsValidLength(usuario.Login.Trim()))
-            {
-                return BadRequest("La longitud del Login es inválida:debe ser mayor a 10 y menor a 40, asegurate de no tener espacios en blanco");
-            }      
 
-            if (!usuario.IsValidEmail(usuario.Login))
+            //validamos respuesta
+            if (string.IsNullOrWhiteSpace(usuario.Respuesta))
             {
-                return BadRequest("El correo electrónico ingresado no es válido.");
-            }            
-    
+                return BadRequest("El parámetro 'Respuesta' no puede estar vacío.");
+            }                               
             if (!usuario.ValidarEspaciosIzquierda(usuario.Respuesta))
             {
                 return BadRequest("La respuesta no puede tener  espacios a la izquierda");
             }  
-
             if (!usuario.IsValidLengthRespuesta())
             {
-                return BadRequest("La longitud de la Respuesta es inválida:debe ser mayor a 10 y menor a 40, asegurate de no tener espacios en blanco");
+                return BadRequest("La longitud de la Respuesta es inválida:debe ser menor a 40, asegurate de no tener espacios en blanco");
             } 
-            // Validar el nombre de usuario
-            // Validar el nombre de usuario
+
+            //validamos respuesta
             if (!usuario.ContainsOnlyLetters(usuario.Respuesta))
             {
                 return BadRequest("La respuesta no puede contener números ni carácteres espaciales");

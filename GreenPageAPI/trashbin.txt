@@ -1,3 +1,32 @@
+ser mayor a 10 y
+ 
+ario.dni.Length != 8 ||
+ 
+vacío
+ 
+true
+ 
+            // Validar el nombre de usuario
+            // Validar el nombre de usuario
+ 
+            // Validar el nombre de usuario
+
+ 
+La longitud del Login es inválida:debe ser mayor a 10 y menor a 40, asegurate de no tener espacios en blanco
+ 
+            // Validar los parámetros antes de llamar al SP
+
+ 
+            // Validar el nombre de usuario
+
+ 
+            // Validar el nombre de usuario
+
+ 
+DNI
+ 
+DNI
+ 
                 if (!user.IsValidPassword())
                 {
                     return BadRequest("La contraseña debe tener al menos 1 mayúscula, 1 minúscula, 1 número y más de 8 caracteres.");
