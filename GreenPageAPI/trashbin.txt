@@ -1,0 +1,135 @@
+                if (!user.IsValidPassword())
+                {
+                    return BadRequest("La contraseña debe tener al menos 1 mayúscula, 1 minúscula, 1 número y más de 8 caracteres.");
+                }  
+ 
+                return Ok(new { message = "Registro exitoso" });
+
+ 
+        [HttpPost("login")]
+        public async Task<IActionResult> Login([FromBody] LoginModel model)
+        {
+            //var user = await dataContext.Usuarios.FirstOrDefaultAsync(u => u.Login == model.User && u.Pass == model.Pass);
+            var user = await dataContext.Usuarios.FirstOrDefaultAsync(u => u.Login == model.User);           
+            if (user == null)
+            
+            {
+                return NotFound("Usuario no encontrado.");
+            }
+
+            bool isPasswordValid = BCrypt.Net.BCrypt.Verify(model.Pass, user.Pass);
+            if (!isPasswordValid)
+            {
+                return Unauthorized("Contraseña incorrecta.");
+            }
+
+            var response = new
+            {
+                message = "Login exitoso",
+                userlogger = new 
+                {
+                    id = user.IdUsuario,
+                    nomUsuario = user.NomUsuario,
+                    idPerfil = user.IdPerfil,
+                    perfilNombre = user.IdPerfil == 1 ? "Subastador/Ofertador" : "Admin"
+                }
+            };            
+            //return Ok(new { message = "Login exitoso" });
+            return Ok(new { message = "Registro exitoso" });
+    }
+ 
+                return Ok(new { message = "Usuario encontrado" });
+
+ 
+            [Required]
+
+ 
+            public string Pass { get; set; }
+
+ 
+ if (user == null)
+ 
+        public bool ContainsOnlyLettersRespuesta(string username)
+        {
+    // Permite letras (mayúsculas y minúsculas) y espacios
+            return username.All(c => char.IsLetter(c) || char.IsDigit(c) || char.IsWhiteSpace(c));            
+        }  
+ 
+        if (!usuario.ContainsOnlyLettersRespuesta(usuario.Respuesta))
+        {
+            return BadRequest("La respuesta no puede tener caracteres");
+        }    
+ 
+ername.Length >= 2 &&
+ 
+username
+ 
+Login
+ 
+usuario
+ 
+nombre
+ 
+La longitud del Login es inválida:debe ser mayor a 10 y menor a 40, asegurate de no tener espacios en blan
+ 
+Trim
+ 
+
+            public bool IsValidEmail()
+            {
+                // Expresión regular para validar el formato del correo electrónico
+                string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+                return Regex.IsMatch(Email, pattern);
+            }   
+ 
+usuario
+ 
+derecha
+ 
+
+        public bool IsValidUsername()
+        {
+            return !string.IsNullOrWhiteSpace(NomUsuario);
+        }
+ 
+        // Validar el nombre de usuario
+        if (!usuario.IsValidUsername())
+        {
+            return BadRequest("El usuario no puede estar vacio ni tener espacios en blanco");
+        }
+ 
+static
+ 
+nomUsuario
+ 
+El nombre de usuario debe tener entre 10 y 40 caracteres, solo letras y no contener números ni caracteres especiales.
+ 
+&
+                IsValidLength(NomUsuario) &&
+                ContainsOnlyLetters(NomUsuario)
+ 
+        public bool IsValidUsername()
+{
+    // Verificar si el nombre de usuario es nulo o está vacío
+    if (string.IsNullOrWhiteSpace(NomUsuario))
+    {
+        return false;
+    }
+
+    // Verificar longitud entre 10 y 40 caracteres
+    if (NomUsuario.Length < 10 || NomUsuario.Length > 40)
+    {
+        return false;
+    }
+
+    // Verificar que solo contenga letras (mayúsculas y minúsculas) y sin números o caracteres especiales
+    if (!NomUsuario.All(char.IsLetter))
+    {
+        return false;
+    }
+
+    return true;
+    }
+       
+    }
+ 

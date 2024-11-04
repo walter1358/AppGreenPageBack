@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/GreenPageAPI.csproj": {}
+    "/home/walter/Documentos/UPN/Calidad y pruebas de software/ProyectoGIT/Back/AppGreenPageBack/GreenPageAPI/GreenPageAPI.csproj": {}
   },
   "projects": {
-    "/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/GreenPageAPI.csproj": {
+    "/home/walter/Documentos/UPN/Calidad y pruebas de software/ProyectoGIT/Back/AppGreenPageBack/GreenPageAPI/GreenPageAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/GreenPageAPI.csproj",
+        "projectUniqueName": "/home/walter/Documentos/UPN/Calidad y pruebas de software/ProyectoGIT/Back/AppGreenPageBack/GreenPageAPI/GreenPageAPI.csproj",
         "projectName": "GreenPageAPI",
-        "projectPath": "/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/GreenPageAPI.csproj",
+        "projectPath": "/home/walter/Documentos/UPN/Calidad y pruebas de software/ProyectoGIT/Back/AppGreenPageBack/GreenPageAPI/GreenPageAPI.csproj",
         "packagesPath": "/home/walter/.nuget/packages/",
-        "outputPath": "/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/obj/",
+        "outputPath": "/home/walter/Documentos/UPN/Calidad y pruebas de software/ProyectoGIT/Back/AppGreenPageBack/GreenPageAPI/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/walter/.nuget/NuGet/NuGet.Config"
@@ -43,6 +43,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.10, )"

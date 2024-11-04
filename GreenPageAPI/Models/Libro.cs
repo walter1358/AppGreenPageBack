@@ -17,7 +17,7 @@ namespace GreenPageAPI.Models
 
         [Required]
         [StringLength(255)]
-        public string DesTitulo { get; set; }
+        public string Destitulo { get; set; }
 
         [Required]
         [StringLength(50)]

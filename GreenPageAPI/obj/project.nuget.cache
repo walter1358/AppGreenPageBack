@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "autLL74vTc4=",
+  "dgSpecHash": "KsCurwQ+Kyw=",
   "success": true,
-  "projectFilePath": "/home/walter/Documentos/UPN/Calidad y pruebas de software/V2/GreenPage/Backend/GreenPageAPI/GreenPageAPI/GreenPageAPI.csproj",
+  "projectFilePath": "/home/walter/Documentos/UPN/Calidad y pruebas de software/ProyectoGIT/Back/AppGreenPageBack/GreenPageAPI/GreenPageAPI.csproj",
   "expectedPackageFiles": [
     "/home/walter/.nuget/packages/azure.core/1.35.0/azure.core.1.35.0.nupkg.sha512",
     "/home/walter/.nuget/packages/azure.identity/1.10.3/azure.identity.1.10.3.nupkg.sha512",
+    "/home/walter/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512",
     "/home/walter/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.1/microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "/home/walter/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
     "/home/walter/.nuget/packages/microsoft.data.sqlclient/5.1.5/microsoft.data.sqlclient.5.1.5.nupkg.sha512",
