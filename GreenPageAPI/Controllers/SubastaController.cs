@@ -21,6 +21,24 @@ namespace GreenPageAPI.Controllers
             return await _context.Subastas.ToListAsync();
         }
 
+        [HttpGet("listarSubastasConDetalles")]
+        public async Task<ActionResult<IEnumerable<dynamic>>> ListarSubastasConDetalles()
+        {
+            var subastasConDetalles = await _context.Subastas
+                .Include(s => s.Libro) // Incluimos la relación con Libro
+                .Select(s => new 
+                {
+                    TituloLibro = s.Libro.Destitulo, // Obtenemos el título desde Libro
+                    Sinopsis = s.Libro.Sinopsys,
+                    FechaInicio = s.FecInicio,
+                    FechaFin = s.FecFinal,
+                    PrecioBase = s.PrecioBase
+                })
+                .ToListAsync();
+
+            return Ok(subastasConDetalles);
+        }        
+
         [HttpGet("{id}")]
         public async Task<ActionResult<Subasta>> GetSubasta(int id)
         {

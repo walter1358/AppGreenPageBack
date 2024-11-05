@@ -22,7 +22,7 @@ namespace GreenPageAPI.Models
 
         [Required]
         [StringLength(8)]
-        public string DNI  {get;set;}
+        public string dni  {get;set;}
 
         [Required]
         [StringLength(40)]

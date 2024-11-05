@@ -12,6 +12,9 @@ namespace GreenPageAPI.Models
         [Required]
         public int IdLibro { get; set; }
 
+        [ForeignKey("IdLibro")]
+        public Libro Libro { get; set; } // Propiedad de navegación hacia Libro        
+
         [Required]
         public DateTime FecInicio { get; set; }
 

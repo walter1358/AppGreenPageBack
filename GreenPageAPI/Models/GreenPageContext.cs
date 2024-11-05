@@ -10,7 +10,10 @@ namespace GreenPageAPI.Models
         public DbSet<Libro> Libros { get; set; }
         public DbSet<Subasta> Subastas { get; set; }
         public DbSet<Oferta> Ofertas { get; set; }
-        
 
+        public DbSet<Editorial> Editoriales {get;set;}
+        public DbSet<Genero> Generos {get;set;}        
     }
+
+
 }
