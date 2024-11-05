@@ -41,40 +41,49 @@ namespace GreenPageAPI.Controllers
             return Ok(response);
         }
 
-        [HttpPost("login")]
-        public async Task<IActionResult> Login([FromBody] LoginModel model)
+[HttpPost("login")]
+public async Task<IActionResult> Login([FromBody] LoginModel model)
+{
+    try
+    {
+        var user = await dataContext.Usuarios.FirstOrDefaultAsync(u => u.Login == model.User);
+        if (user == null)
         {
-            //var user = await dataContext.Usuarios.FirstOrDefaultAsync(u => u.Login == model.User && u.Pass == model.Pass);
-            var user = await dataContext.Usuarios.FirstOrDefaultAsync(u => u.Login == model.User);
-            if (user == null)
-            
-            {
-                return NotFound("Usuario no encontrado.");
-            }
-
-            bool isPasswordValid = BCrypt.Net.BCrypt.Verify(model.Pass, user.Pass);
-            if (!isPasswordValid)
-            {
-                return Unauthorized("Contraseña incorrecta.");
-            }
-
-            var response = new
-            {
-                message = "Login exitoso",
-                userlogger = new 
-                {
-                    id = user.IdUsuario,
-                    nomUsuario = user.NomUsuario,
-                    idPerfil = user.IdPerfil,
-                    perfilNombre = user.IdPerfil == 1 ? "Subastador/Ofertador" : "Admin"
-                }
-            };
-            
-
-
-            //return Ok(new { message = "Login exitoso" });
-            return Ok(response);
+            return NotFound("Usuario no encontrado.");
         }
+
+        bool isPasswordValid = BCrypt.Net.BCrypt.Verify(model.Pass, user.Pass);
+        if (!isPasswordValid)
+        {
+            return Unauthorized("Contraseña incorrecta.");
+        }
+
+        var response = new
+        {
+            message = "Login exitoso",
+            userlogger = new 
+            {
+                id = user.IdUsuario,
+                nomUsuario = user.NomUsuario,
+                idPerfil = user.IdPerfil,
+                perfilNombre = user.IdPerfil == 1 ? "Subastador/Ofertador" : "Admin"
+            }
+        };
+
+        return Ok(response);
+    }
+    catch (Exception ex)
+    {
+        // Opcional: verificar si es un error de conexión
+        if (ex.InnerException != null && ex.InnerException.Message.Contains("connection"))
+        {
+            return StatusCode(StatusCodes.Status503ServiceUnavailable, "No se pudo conectar a la base de datos.");
+        }
+        
+        return StatusCode(StatusCodes.Status500InternalServerError, "Ocurrió un error en el servidor.");
+    }
+}
+
         
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] Usuario usuario)

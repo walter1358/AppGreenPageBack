@@ -15,7 +15,7 @@ namespace GreenPageAPI.Models
         [Required]
         public int IdGenero { get; set; }
 
-
+        
         [ForeignKey("IdEditorial")]
         public Editorial Editorial { get; set; } // Propiedad de navegación a Editorial
 

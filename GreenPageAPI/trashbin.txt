@@ -1,3 +1,52 @@
+                IdLibro = libroConSubasta.IdLibro,
+
+ 
+eturn BadRequest();
+ 
+IdLibro
+ 
+idLibro
+ 
+IdLibro
+ 
+IdLibro
+ 
+            // Datos de la subasta
+
+ 
+            public double PrecioBase { get; set; }           
+
+ 
+            public DateTime FecFinal { get; set; }
+
+ 
+            public DateTime FecInicio { get; set; }
+
+ 
+                    IdSubasta = s.IdSubasta,
+
+ 
+public override int SaveChanges()
+{
+    foreach (var entry in ChangeTracker.Entries<Editorial>())
+    {
+        if (entry.State == EntityState.Added)
+        {
+            entry.State = EntityState.Unchanged;
+        }
+    }
+
+    foreach (var entry in ChangeTracker.Entries<Genero>())
+    {
+        if (entry.State == EntityState.Added)
+        {
+            entry.State = EntityState.Unchanged;
+        }
+    }
+
+    return base.SaveChanges();
+}
+ 
 ser mayor a 10 y
  
 ario.dni.Length != 8 ||
