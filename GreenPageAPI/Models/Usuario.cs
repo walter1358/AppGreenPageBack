@@ -52,7 +52,7 @@ namespace GreenPageAPI.Models
 
         public bool IsValidLength(string username)
         {
-            return username.Length >= 4 && username.Length <= 40;
+            return username.Length >= 2 && username.Length <= 40;
         }
         public bool IsValidLengthRespuesta()
         {
