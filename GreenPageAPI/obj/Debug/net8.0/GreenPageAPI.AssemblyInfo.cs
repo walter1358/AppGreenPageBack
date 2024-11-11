@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GreenPageAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+294bcdb3a61e94940df964a92fe7fe5cf76939fd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4d82479239481a2639d1b9e2fdac3e4fba5b068b")]
 [assembly: System.Reflection.AssemblyProductAttribute("GreenPageAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GreenPageAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
