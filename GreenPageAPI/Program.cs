@@ -4,6 +4,9 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Agregar SignalR al contenedor de servicios
+builder.Services.AddSignalR();
+
 // Configurar servicios y base de datos
 builder.Services.AddDbContext<GreenPageContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -14,10 +17,16 @@ builder.Services.AddCors(options =>
     options.AddDefaultPolicy(builder =>
     {
         builder.WithOrigins("http://localhost:4200")
-               .AllowAnyHeader()
-               .AllowAnyMethod();
+        //builder.AllowAnyOrigin()   // Permite todos los orígenes
+                .AllowAnyHeader()
+                .AllowAnyMethod()
+                .AllowCredentials();  
     });
 });
+
+
+
+
 
 // Add services to the container.
 
@@ -56,5 +65,11 @@ app.UseEndpoints(endpoints =>
 });
 
 //app.MapControllers();
+// Mapea el Hub de SignalR
+app.MapHub<TimeHub>("/timeHub");
+app.MapHub<TimeHub>("/auctionHub");
+
+
+app.MapControllers();
 
 app.Run();

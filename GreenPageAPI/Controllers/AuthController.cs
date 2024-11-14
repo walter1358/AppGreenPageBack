@@ -5,7 +5,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Text.RegularExpressions;
 
 
-
 namespace GreenPageAPI.Controllers
 {
     public class AuthController : ControllerBase
@@ -14,6 +13,7 @@ namespace GreenPageAPI.Controllers
 
         public AuthController(GreenPageContext context)
         {
+
             dataContext = context;
         }
 
@@ -90,6 +90,19 @@ public async Task<IActionResult> Login([FromBody] LoginModel model)
         {
 
             //validamos usuario
+            if (string.IsNullOrWhiteSpace(usuario.NomUsuario) && 
+                string.IsNullOrWhiteSpace(usuario.ApeUsuario) && 
+                string.IsNullOrWhiteSpace(usuario.dni) && 
+                string.IsNullOrWhiteSpace(usuario.Login) && 
+                string.IsNullOrWhiteSpace(usuario.Pass) && 
+                string.IsNullOrWhiteSpace(usuario.Pregunta) && 
+                string.IsNullOrWhiteSpace(usuario.Respuesta))
+            {
+                return BadRequest("Todos los campos están vacíos");
+            }
+
+   
+            //validamos usuario
             if (string.IsNullOrWhiteSpace(usuario.NomUsuario))
             {
                 return BadRequest("El parámetro 'Nombre' no puede estar vacío.");
@@ -100,7 +113,7 @@ public async Task<IActionResult> Login([FromBody] LoginModel model)
             }    
             if (!usuario.IsValidLength(usuario.NomUsuario.Trim()))
             {
-                return BadRequest("La longitud del nombre de usuario es inválida: mayor a 4 y menor a 40, asegurate de no tener espacios en blanco");
+                return BadRequest("La longitud del nombre de usuario es inválida: mayor a 2 y menor a 40, asegurate de no tener espacios en blanco");
             }        
             if (!usuario.ContainsOnlyLetters(usuario.NomUsuario))
             {
@@ -118,7 +131,7 @@ public async Task<IActionResult> Login([FromBody] LoginModel model)
             }    
             if (!usuario.IsValidLength(usuario.ApeUsuario.Trim()))
             {
-                return BadRequest("La longitud del Apellido de usuario es inválida: mayor a 4 y menor a 40, asegurate de no tener espacios en blanco");
+                return BadRequest("La longitud del Apellido de usuario es inválida: mayor a 2 y menor a 40, asegurate de no tener espacios en blanco");
             }        
             if (!usuario.ContainsOnlyLetters(usuario.ApeUsuario))
             {

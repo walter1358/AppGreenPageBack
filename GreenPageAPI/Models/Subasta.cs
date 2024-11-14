@@ -25,5 +25,14 @@ namespace GreenPageAPI.Models
         public double PrecioBase { get; set; }
 
         public int? IdUsuario { get; set; }
+
+        public DateTime? StartTime { get; set; }
+        public int? Duration { get; set; }  // Duración en segundos
+        public DateTime? EndTime { get; set; }
+        public bool? isclosed { get; set; }        
+    
+
+
+
     }
 }
