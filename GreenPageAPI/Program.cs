@@ -27,6 +27,7 @@ builder.Services.AddCors(options =>
 
 
 
+
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -69,5 +70,6 @@ app.MapHub<TimeHub>("/timeHub");
 app.MapHub<TimeHub>("/auctionHub");
 
 
+app.MapControllers();
 
 app.Run();

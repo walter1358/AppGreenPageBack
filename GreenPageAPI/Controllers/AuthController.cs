@@ -5,7 +5,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Text.RegularExpressions;
 
 
-
 namespace GreenPageAPI.Controllers
 {
     public class AuthController : ControllerBase
@@ -14,6 +13,7 @@ namespace GreenPageAPI.Controllers
 
         public AuthController(GreenPageContext context)
         {
+
             dataContext = context;
         }
 

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/walter/Documentos/UPN/Calidad y pruebas de software/ProyectoGIT/Back/AppGreenPageBack/GreenPageAPI/GreenPageAPI.csproj": {}
+    "D:\\Otros\\UPN\\CaliidadYPruebas\\ProyectoGit\\Back\\AppGreenPageBack\\GreenPageAPI\\GreenPageAPI.csproj": {}
   },
   "projects": {
-    "/home/walter/Documentos/UPN/Calidad y pruebas de software/ProyectoGIT/Back/AppGreenPageBack/GreenPageAPI/GreenPageAPI.csproj": {
+    "D:\\Otros\\UPN\\CaliidadYPruebas\\ProyectoGit\\Back\\AppGreenPageBack\\GreenPageAPI\\GreenPageAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/walter/Documentos/UPN/Calidad y pruebas de software/ProyectoGIT/Back/AppGreenPageBack/GreenPageAPI/GreenPageAPI.csproj",
+        "projectUniqueName": "D:\\Otros\\UPN\\CaliidadYPruebas\\ProyectoGit\\Back\\AppGreenPageBack\\GreenPageAPI\\GreenPageAPI.csproj",
         "projectName": "GreenPageAPI",
-        "projectPath": "/home/walter/Documentos/UPN/Calidad y pruebas de software/ProyectoGIT/Back/AppGreenPageBack/GreenPageAPI/GreenPageAPI.csproj",
-        "packagesPath": "/home/walter/.nuget/packages/",
-        "outputPath": "/home/walter/Documentos/UPN/Calidad y pruebas de software/ProyectoGIT/Back/AppGreenPageBack/GreenPageAPI/obj/",
+        "projectPath": "D:\\Otros\\UPN\\CaliidadYPruebas\\ProyectoGit\\Back\\AppGreenPageBack\\GreenPageAPI\\GreenPageAPI.csproj",
+        "packagesPath": "C:\\Users\\walter.more_culqi\\.nuget\\packages\\",
+        "outputPath": "D:\\Otros\\UPN\\CaliidadYPruebas\\ProyectoGit\\Back\\AppGreenPageBack\\GreenPageAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/walter/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\walter.more_culqi\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -83,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/walter/.dotnet/sdk/8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
