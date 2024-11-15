@@ -17,6 +17,7 @@ namespace GreenPageAPI.Controllers
             dataContext = context;
         }
 
+
         [HttpPost("recuperauser")]
         public async Task<IActionResult> Recuperauser([FromBody] UserModel usermodel)
         {
@@ -41,48 +42,55 @@ namespace GreenPageAPI.Controllers
             return Ok(response);
         }
 
-[HttpPost("login")]
-public async Task<IActionResult> Login([FromBody] LoginModel model)
-{
-    try
-    {
-        var user = await dataContext.Usuarios.FirstOrDefaultAsync(u => u.Login == model.User);
-        if (user == null)
-        {
-            return NotFound("Usuario no encontrado.");
-        }
 
-        bool isPasswordValid = BCrypt.Net.BCrypt.Verify(model.Pass, user.Pass);
-        if (!isPasswordValid)
+       [HttpPost("login")]
+        public async Task<IActionResult> Login([FromBody] LoginModel model)
         {
-            return Unauthorized("Contraseña incorrecta.");
-        }
-
-        var response = new
-        {
-            message = "Login exitoso",
-            userlogger = new 
+            try
             {
-                id = user.IdUsuario,
-                nomUsuario = user.NomUsuario,
-                idPerfil = user.IdPerfil,
-                perfilNombre = user.IdPerfil == 1 ? "Subastador/Ofertador" : "Admin"
-            }
-        };
+                var user = await dataContext.Usuarios.FirstOrDefaultAsync(u => u.Login == model.User);
+                if (user == null)
+                {
+                    return NotFound("Usuario no encontrado.");
+                }
 
-        return Ok(response);
-    }
-    catch (Exception ex)
-    {
-        // Opcional: verificar si es un error de conexión
-        if (ex.InnerException != null && ex.InnerException.Message.Contains("connection"))
-        {
-            return StatusCode(StatusCodes.Status503ServiceUnavailable, "No se pudo conectar a la base de datos.");
+                // Verifica si el usuario está activo
+                if (user.isactive != true) // Asegúrate de que el campo se llama 'IsActive' o el nombre correcto según tu modelo
+                {
+                    return Unauthorized("Usuario inactivo.");
+                }
+
+                bool isPasswordValid = BCrypt.Net.BCrypt.Verify(model.Pass, user.Pass);
+                if (!isPasswordValid)
+                {
+                    return Unauthorized("Contraseña incorrecta.");
+                }
+
+                var response = new
+                {
+                    message = "Login exitoso",
+                    userlogger = new 
+                    {
+                        id = user.IdUsuario,
+                        nomUsuario = user.NomUsuario,
+                        idPerfil = user.IdPerfil,
+                        perfilNombre = user.IdPerfil == 1 ? "Subastador/Ofertador" : "Admin"
+                    }
+                };
+
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                // Opcional: verificar si es un error de conexión
+                if (ex.InnerException != null && ex.InnerException.Message.Contains("connection"))
+                {
+                    return StatusCode(StatusCodes.Status503ServiceUnavailable, "No se pudo conectar a la base de datos.");
+                }
+                
+                return StatusCode(StatusCodes.Status500InternalServerError, "Ocurrió un error en el servidor.");
+            }
         }
-        
-        return StatusCode(StatusCodes.Status500InternalServerError, "Ocurrió un error en el servidor.");
-    }
-}
 
         
         [HttpPost("register")]
@@ -226,6 +234,8 @@ public async Task<IActionResult> Login([FromBody] LoginModel model)
             
             // Establecer el perfil como 1 por defecto
             usuario.IdPerfil = 1;
+
+            usuario.isactive = true;
 
             // Establecer la fecha de creación a la fecha actual
             usuario.FecCreacion = DateTime.Now;

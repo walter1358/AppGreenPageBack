@@ -187,7 +187,7 @@ namespace GreenPageAPI.Controllers
             public double PrecioBase { get; set; }
         }
 
-        public class LibroUpt
+        public class    LibroUpt
         {
             public int IdLibro {get;set;}
             public int IdEditorial { get; set; }
