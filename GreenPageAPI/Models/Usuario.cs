@@ -40,6 +40,8 @@ namespace GreenPageAPI.Models
 
         public DateTime? FecCreacion { get; set; }
 
+        public bool? isactive{get;set;}
+
         public bool IsValidPassword()
         {
             // Validar que la contraseña tenga al menos una letra mayúscula, una minúscula, un número y más de 8 caracteres
