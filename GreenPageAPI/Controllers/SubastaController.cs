@@ -138,7 +138,7 @@ namespace GreenPageAPI.Controllers
                 // Verifica si ya tiene una hora de inicio para evitar duplicar
                 if (!subasta.StartTime.HasValue)
                 {
-                    var tiempoDuracion = TimeSpan.FromSeconds(30);
+                    var tiempoDuracion = TimeSpan.FromSeconds(60);
                     subasta.isclosed = false; 
                     subasta.StartTime = DateTime.UtcNow;
                     subasta.EndTime = subasta.StartTime.Value.Add(tiempoDuracion);

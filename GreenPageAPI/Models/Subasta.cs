@@ -7,19 +7,19 @@ namespace GreenPageAPI.Models
     public class Subasta
     {
         [Key]
-        public int IdSubasta { get; set; }
+        public int? IdSubasta { get; set; }
 
         [Required]
-        public int IdLibro { get; set; }
+        public int? IdLibro { get; set; }
 
         [ForeignKey("IdLibro")]
         public Libro Libro { get; set; } // Propiedad de navegación hacia Libro        
 
         [Required]
-        public DateTime FecInicio { get; set; }
+        public DateTime? FecInicio { get; set; }
 
         [Required]
-        public DateTime FecFinal { get; set; }
+        public DateTime? FecFinal { get; set; }
 
         [Required]
         public double PrecioBase { get; set; }

@@ -1,0 +1,25 @@
+﻿D:\Otros\UPN\CaliidadYPruebas\ProyectoGit\Back\AppGreenPageBack\GreenPageAPI\Controllers\AuthController.cs
+D:\Otros\UPN\CaliidadYPruebas\ProyectoGit\Back\AppGreenPageBack\GreenPageAPI\Controllers\LibroController.cs
+D:\Otros\UPN\CaliidadYPruebas\ProyectoGit\Back\AppGreenPageBack\GreenPageAPI\Controllers\OfertaController.cs
+D:\Otros\UPN\CaliidadYPruebas\ProyectoGit\Back\AppGreenPageBack\GreenPageAPI\Controllers\SubastaController.cs
+D:\Otros\UPN\CaliidadYPruebas\ProyectoGit\Back\AppGreenPageBack\GreenPageAPI\Controllers\UsuarioController.cs
+D:\Otros\UPN\CaliidadYPruebas\ProyectoGit\Back\AppGreenPageBack\GreenPageAPI\Controllers\WeatherForecastController.cs
+D:\Otros\UPN\CaliidadYPruebas\ProyectoGit\Back\AppGreenPageBack\GreenPageAPI\Hubs\TimeHub.cs
+D:\Otros\UPN\CaliidadYPruebas\ProyectoGit\Back\AppGreenPageBack\GreenPageAPI\Models\GreenPageContext.cs
+D:\Otros\UPN\CaliidadYPruebas\ProyectoGit\Back\AppGreenPageBack\GreenPageAPI\Models\Libro.cs
+D:\Otros\UPN\CaliidadYPruebas\ProyectoGit\Back\AppGreenPageBack\GreenPageAPI\Models\Oferta.cs
+D:\Otros\UPN\CaliidadYPruebas\ProyectoGit\Back\AppGreenPageBack\GreenPageAPI\Models\Subasta.cs
+D:\Otros\UPN\CaliidadYPruebas\ProyectoGit\Back\AppGreenPageBack\GreenPageAPI\Models\Usuario.cs
+D:\Otros\UPN\CaliidadYPruebas\ProyectoGit\Back\AppGreenPageBack\GreenPageAPI\Program.cs
+D:\Otros\UPN\CaliidadYPruebas\ProyectoGit\Back\AppGreenPageBack\GreenPageAPI\WeatherForecast.cs
+D:\Otros\UPN\CaliidadYPruebas\ProyectoGit\Back\AppGreenPageBack\GreenPageAPI\obj\Debug\net8.0\GreenPageAPI.GlobalUsings.g.cs
+D:\Otros\UPN\CaliidadYPruebas\ProyectoGit\Back\AppGreenPageBack\GreenPageAPI\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+D:\Otros\UPN\CaliidadYPruebas\ProyectoGit\Back\AppGreenPageBack\GreenPageAPI\obj\Debug\net8.0\GreenPageAPI.AssemblyInfo.cs
+D:\Otros\UPN\CaliidadYPruebas\ProyectoGit\Back\AppGreenPageBack\GreenPageAPI\obj\Debug\net8.0\GreenPageAPI.MvcApplicationPartsAssemblyInfo.cs
+D:\Otros\UPN\CaliidadYPruebas\ProyectoGit\Back\AppGreenPageBack\GreenPageAPI\appsettings.Development.json
+D:\Otros\UPN\CaliidadYPruebas\ProyectoGit\Back\AppGreenPageBack\GreenPageAPI\appsettings.json
+D:\Otros\UPN\CaliidadYPruebas\ProyectoGit\Back\AppGreenPageBack\GreenPageAPI\ccomo ejecutar sonarQube
+D:\Otros\UPN\CaliidadYPruebas\ProyectoGit\Back\AppGreenPageBack\GreenPageAPI\enviroment.env
+D:\Otros\UPN\CaliidadYPruebas\ProyectoGit\Back\AppGreenPageBack\GreenPageAPI\GreenPageAPI.http
+D:\Otros\UPN\CaliidadYPruebas\ProyectoGit\Back\AppGreenPageBack\GreenPageAPI\trashbin.txt
+D:\Otros\UPN\CaliidadYPruebas\ProyectoGit\Back\AppGreenPageBack\GreenPageAPI\Properties\launchSettings.json

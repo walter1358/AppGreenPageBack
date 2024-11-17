@@ -1,15 +1,40 @@
 using GreenPageAPI.Models;
 using Microsoft.EntityFrameworkCore;
+using dotenv.net;
+using Microsoft.Extensions.DependencyInjection;
+using DotNetEnv;
+
+
+Env.Load("enviroment.env");
 
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Configurar los servicios, incluyendo el acceso a appsettings.json
+builder.Configuration
+    .SetBasePath(Directory.GetCurrentDirectory())
+    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+    .AddEnvironmentVariables();
+
+
+
 // Agregar SignalR al contenedor de servicios
 builder.Services.AddSignalR();
 
-// Configurar servicios y base de datos
+// Obtener la variable de entorno DB_PASSWORD
+var dbPassword = Environment.GetEnvironmentVariable("DB_PASSWORD");
+
+// Comprobar si dbPassword es null o vacío y manejarlo
+if (string.IsNullOrEmpty(dbPassword))
+{
+    throw new InvalidOperationException("La variable de entorno DB_PASSWORD no está configurada.");
+}
+
+// Configurar el contexto de la base de datos
 builder.Services.AddDbContext<GreenPageContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")?.Replace("{DB_PASSWORD}", dbPassword))
+);
+
 
 // Agregar el servicio CORS
 builder.Services.AddCors(options =>
@@ -35,14 +60,6 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Configura Kestrel para que use el puerto 44373 en HTTPS
-//builder.WebHost.ConfigureKestrel(options =>
-//{
-    //options.ListenLocalhost(44373, listenOptions =>
-    //{
-    //    listenOptions.UseHttps(); // Habilita HTTPS en este puerto
-    //});
-//});
 
 var app = builder.Build();
 

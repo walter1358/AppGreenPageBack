@@ -21,6 +21,12 @@ namespace GreenPageAPI.Controllers
         [HttpPost("recuperauser")]
         public async Task<IActionResult> Recuperauser([FromBody] UserModel usermodel)
         {
+            // Verificar si el modelo es válido
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState); // Devuelve los errores de validación
+            }
+
             var user = await dataContext.Usuarios.FirstOrDefaultAsync(u => u.Login == usermodel.User);
             if (user == null)
             {
@@ -43,59 +49,77 @@ namespace GreenPageAPI.Controllers
         }
 
 
-       [HttpPost("login")]
+        [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginModel model)
         {
+            if (!ModelState.IsValid) return BadRequest(ModelState); // Devuelve los errores de validación
+
             try
             {
-                var user = await dataContext.Usuarios.FirstOrDefaultAsync(u => u.Login == model.User);
-                if (user == null)
-                {
-                    return NotFound("Usuario no encontrado.");
-                }
+                var user = await GetUserByLoginAsync(model.User);
+                if (user == null) return NotFound("Usuario no encontrado.");
 
-                // Verifica si el usuario está activo
-                if (user.isactive != true) // Asegúrate de que el campo se llama 'IsActive' o el nombre correcto según tu modelo
-                {
-                    return Unauthorized("Usuario inactivo.");
-                }
+                if (!IsUserActive(user)) return Unauthorized("Usuario inactivo.");
 
-                bool isPasswordValid = BCrypt.Net.BCrypt.Verify(model.Pass, user.Pass);
-                if (!isPasswordValid)
-                {
-                    return Unauthorized("Contraseña incorrecta.");
-                }
+                if (!IsPasswordValid(model.Pass, user.Pass)) return Unauthorized("Contraseña incorrecta.");
 
-                var response = new
-                {
-                    message = "Login exitoso",
-                    userlogger = new 
-                    {
-                        id = user.IdUsuario,
-                        nomUsuario = user.NomUsuario,
-                        idPerfil = user.IdPerfil,
-                        perfilNombre = user.IdPerfil == 1 ? "Subastador/Ofertador" : "Admin"
-                    }
-                };
-
+                var response = GenerateLoginResponse(user);
                 return Ok(response);
             }
             catch (Exception ex)
             {
-                // Opcional: verificar si es un error de conexión
-                if (ex.InnerException != null && ex.InnerException.Message.Contains("connection"))
-                {
-                    return StatusCode(StatusCodes.Status503ServiceUnavailable, "No se pudo conectar a la base de datos.");
-                }
-                
-                return StatusCode(StatusCodes.Status500InternalServerError, "Ocurrió un error en el servidor.");
+                return HandleException(ex);
             }
         }
+
+        private async Task<Usuario?> GetUserByLoginAsync(string login)
+        {
+            return await dataContext.Usuarios.FirstOrDefaultAsync(u => u.Login == login);
+        }
+
+         static bool IsUserActive(Usuario user)
+        {
+            return user.isactive == true;
+        }
+
+        private static bool IsPasswordValid(string enteredPassword, string storedPassword)
+        {
+            return BCrypt.Net.BCrypt.Verify(enteredPassword, storedPassword);
+        }
+
+        private object GenerateLoginResponse(Usuario user)
+        {
+            return new
+            {
+                message = "Login exitoso",
+                userlogger = new
+                {
+                    id = user.IdUsuario,
+                    nomUsuario = user.NomUsuario,
+                    idPerfil = user.IdPerfil,
+                    perfilNombre = user.IdPerfil == 1 ? "Subastador/Ofertador" : "Admin"
+                }
+            };
+        }
+
+        private IActionResult HandleException(Exception ex)
+        {
+            // Opcional: verificar si es un error de conexión
+            if (ex.InnerException != null && ex.InnerException.Message.Contains("connection"))
+            {
+                return StatusCode(StatusCodes.Status503ServiceUnavailable, "No se pudo conectar a la base de datos.");
+            }
+
+            return StatusCode(StatusCodes.Status500InternalServerError, "Ocurrió un error en el servidor.");
+        }
+      
 
         
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] Usuario usuario)
         {
+
+            
 
             //validamos usuario
             if (string.IsNullOrWhiteSpace(usuario.NomUsuario) && 
@@ -229,11 +253,19 @@ namespace GreenPageAPI.Controllers
             }        
 
 
+           if (!ModelState.IsValid)
+             {
+               return BadRequest(ModelState);
+             }   
+
           // Hashea la contraseña del usuario
             usuario.Pass = BCrypt.Net.BCrypt.HashPassword(usuario.Pass);
             
-            // Establecer el perfil como 1 por defecto
-            usuario.IdPerfil = 1;
+            // Establecer el perfil como 1 por defecto si es nulo
+            if (usuario.IdPerfil == null || usuario.IdPerfil <= 0)
+            {
+                usuario.IdPerfil = 1;
+            }
 
             usuario.isactive = true;
 

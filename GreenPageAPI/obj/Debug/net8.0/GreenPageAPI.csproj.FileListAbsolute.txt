@@ -310,3 +310,6 @@ D:\Otros\UPN\CaliidadYPruebas\ProyectoGit\Back\AppGreenPageBack\GreenPageAPI\obj
 D:\Otros\UPN\CaliidadYPruebas\ProyectoGit\Back\AppGreenPageBack\GreenPageAPI\obj\Debug\net8.0\GreenPageAPI.pdb
 D:\Otros\UPN\CaliidadYPruebas\ProyectoGit\Back\AppGreenPageBack\GreenPageAPI\obj\Debug\net8.0\GreenPageAPI.genruntimeconfig.cache
 D:\Otros\UPN\CaliidadYPruebas\ProyectoGit\Back\AppGreenPageBack\GreenPageAPI\obj\Debug\net8.0\ref\GreenPageAPI.dll
+d:\Otros\UPN\CaliidadYPruebas\ProyectoGit\Back\AppGreenPageBack\GreenPageAPI\bin\Debug\net8.0\dotenv.net.dll
+d:\Otros\UPN\CaliidadYPruebas\ProyectoGit\Back\AppGreenPageBack\GreenPageAPI\bin\Debug\net8.0\DotNetEnv.dll
+d:\Otros\UPN\CaliidadYPruebas\ProyectoGit\Back\AppGreenPageBack\GreenPageAPI\bin\Debug\net8.0\Sprache.dll

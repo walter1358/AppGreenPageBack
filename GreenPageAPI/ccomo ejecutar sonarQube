@@ -1,0 +1,9 @@
+dotnet tool install --global dotnet-sonarscanner
+
+dotnet-sonarscanner --version
+
+dotnet sonarscanner begin /k:"GreenPage" /d:sonar.host.url="http://localhost:9000" /d:sonar.login="squ_0efef359e3b41bea06c465cdbe813b915dd9d8cf"
+
+dotnet build
+
+dotnet sonarscanner end /d:sonar.login="squ_0efef359e3b41bea06c465cdbe813b915dd9d8cf"

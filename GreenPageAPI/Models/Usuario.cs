@@ -9,7 +9,7 @@ namespace GreenPageAPI.Models
     public class Usuario
     {
         [Key]
-        public int IdUsuario { get; set; }
+        public int? IdUsuario { get; set; }
         public int? IdPerfil { get; set; }
 
         [Required]

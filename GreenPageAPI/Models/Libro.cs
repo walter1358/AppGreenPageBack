@@ -7,13 +7,13 @@ namespace GreenPageAPI.Models
     public class Libro
     {
         [Key]
-        public int IdLibro { get; set; }
+        public int? IdLibro { get; set; }
 
         [Required]
-        public int IdEditorial { get; set; }
+        public int? IdEditorial { get; set; }
 
         [Required]
-        public int IdGenero { get; set; }
+        public int? IdGenero { get; set; }
 
         
         [ForeignKey("IdEditorial")]
@@ -46,7 +46,7 @@ namespace GreenPageAPI.Models
     public class Editorial
     {
         [Key]
-        public int ideditorial { get; set; }
+        public int? ideditorial { get; set; }
         public string deseditorial { get; set; }
     }
 
@@ -54,7 +54,7 @@ namespace GreenPageAPI.Models
     public class Genero
     {
         [Key]
-        public int idgenero { get; set; }
+        public int? idgenero { get; set; }
         public string desgenero { get; set; }
     }
 

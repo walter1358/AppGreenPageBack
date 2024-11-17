@@ -10,7 +10,7 @@ namespace GreenPageAPI.Models
         public int IdOferta { get; set; }
 
         [Required]
-        public int IdSubasta { get; set; }
+        public int? IdSubasta { get; set; }
 
         [ForeignKey("IdUsuario")]
         public Usuario? usuario { get; set; } // Propiedad de navegación hacia el usuario       
