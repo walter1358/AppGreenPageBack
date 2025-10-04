@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Otros\\UPN\\CaliidadYPruebas\\ProyectoGit\\Back\\AppGreenPageBack\\GreenPageAPI\\GreenPageAPI.csproj": {}
+    "C:\\Users\\walter.more_culqi.WCOLLANTES-HP64\\Documents\\Proyectos\\AppGreenPageBack\\GreenPageAPI\\GreenPageAPI.csproj": {}
   },
   "projects": {
-    "D:\\Otros\\UPN\\CaliidadYPruebas\\ProyectoGit\\Back\\AppGreenPageBack\\GreenPageAPI\\GreenPageAPI.csproj": {
+    "C:\\Users\\walter.more_culqi.WCOLLANTES-HP64\\Documents\\Proyectos\\AppGreenPageBack\\GreenPageAPI\\GreenPageAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Otros\\UPN\\CaliidadYPruebas\\ProyectoGit\\Back\\AppGreenPageBack\\GreenPageAPI\\GreenPageAPI.csproj",
+        "projectUniqueName": "C:\\Users\\walter.more_culqi.WCOLLANTES-HP64\\Documents\\Proyectos\\AppGreenPageBack\\GreenPageAPI\\GreenPageAPI.csproj",
         "projectName": "GreenPageAPI",
-        "projectPath": "D:\\Otros\\UPN\\CaliidadYPruebas\\ProyectoGit\\Back\\AppGreenPageBack\\GreenPageAPI\\GreenPageAPI.csproj",
-        "packagesPath": "C:\\Users\\walter.more_culqi\\.nuget\\packages\\",
-        "outputPath": "D:\\Otros\\UPN\\CaliidadYPruebas\\ProyectoGit\\Back\\AppGreenPageBack\\GreenPageAPI\\obj\\",
+        "projectPath": "C:\\Users\\walter.more_culqi.WCOLLANTES-HP64\\Documents\\Proyectos\\AppGreenPageBack\\GreenPageAPI\\GreenPageAPI.csproj",
+        "packagesPath": "C:\\Users\\walter.more_culqi.WCOLLANTES-HP64\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\walter.more_culqi.WCOLLANTES-HP64\\Documents\\Proyectos\\AppGreenPageBack\\GreenPageAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\walter.more_culqi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\walter.more_culqi.WCOLLANTES-HP64\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -37,7 +37,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -91,7 +92,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

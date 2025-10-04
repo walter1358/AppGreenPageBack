@@ -35,7 +35,7 @@ builder.Services.AddDbContext<GreenPageContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")?.Replace("{DB_PASSWORD}", dbPassword))
 );
 
-
+ 
 // Agregar el servicio CORS
 builder.Services.AddCors(options =>
 {

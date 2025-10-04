@@ -1,11 +1,1 @@
-{
-  "Version": 1,
-  "Hash": "+y1Vk3aI49NP5FeUbrPffdav0o1Ncib1ba40IpkvA/M=",
-  "Source": "GreenPageAPI",
-  "BasePath": "_content/GreenPageAPI",
-  "Mode": "Default",
-  "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
-}
+{"Version":1,"Hash":"VlzQmUq2eMqwK+GalF+y6QyFaUytcMHnZr3myoKEev4=","Source":"GreenPageAPI","BasePath":"_content/GreenPageAPI","Mode":"Default","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}

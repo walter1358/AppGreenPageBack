@@ -52,10 +52,17 @@ namespace GreenPageAPI.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginModel model)
         {
-            if (!ModelState.IsValid) return BadRequest(ModelState); // Devuelve los errores de validación
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState); // Devuelve los errores de validación
 
             try
             {
+                        // 🔹 1. Validar CAPTCHA antes de nada
+                var isCaptchaValid = await VerifyCaptcha(model.CaptchaToken);
+                if (!isCaptchaValid)
+                    return BadRequest("Captcha inválido. Inténtalo de nuevo.");
+
+                // 🔹 2. Validar usuario y contraseña
                 var user = await GetUserByLoginAsync(model.User);
                 if (user == null) return NotFound("Usuario no encontrado.");
 
@@ -71,6 +78,25 @@ namespace GreenPageAPI.Controllers
                 return HandleException(ex);
             }
         }
+
+        private async Task<bool> VerifyCaptcha(string token)
+        {
+            var secret = "6LdAyN0rAAAAAKOMuvnmBQs76IlkXqViAGfS952v"; // 🔑 tu clave secreta de reCAPTCHA (NO la del frontend, sino la del backend)
+            using var client = new HttpClient();
+
+            var response = await client.PostAsync(
+                $"https://www.google.com/recaptcha/api/siteverify?secret={secret}&response={token}",
+                null
+            );
+
+            if (!response.IsSuccessStatusCode) 
+                return false;
+
+            var captchaResponse = await response.Content.ReadFromJsonAsync<CaptchaVerificationResponse>();
+
+            return captchaResponse != null && captchaResponse.success;
+        }
+
 
         private async Task<Usuario?> GetUserByLoginAsync(string login)
         {
@@ -341,21 +367,33 @@ namespace GreenPageAPI.Controllers
 
 
 }
-        public class LoginModel
-        {
-            [Required]
-            public string User { get; set; }
+    public class LoginModel
+    {
+        [Required]
+        public string User { get; set; }
 
-            [Required]
-            public string Pass { get; set; }
-        }
+        [Required]
+        public string Pass { get; set; }
+
+        [Required]
+        public string CaptchaToken { get; set; }        
+                      
+    }
+
+    public class CaptchaVerificationResponse
+    {
+        public bool success { get; set; }
+        public double score { get; set; } // si usas reCAPTCHA v3
+        public string action { get; set; }
+        public List<string> error_codes { get; set; }
+    }
 
 
-        public class UserModel
-        {
-            [Required]
-            public string User { get; set; }
-        }        
+    public class UserModel
+    {
+        [Required]
+        public string User { get; set; }
+    }        
 
         public class PassModel
         {
